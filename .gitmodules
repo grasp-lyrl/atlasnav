@@ -1,0 +1,12 @@
+[submodule "diff-gaussian-rasterization-w-depth.git"]
+	path = diff-gaussian-rasterization-w-depth.git
+	url = https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth.git
+[submodule "diff-gaussian-rasterization-multi"]
+	path = diff-gaussian-rasterization-multi
+	url = https://github.com/ongdexter/diff-gaussian-rasterization-multi.git
+[submodule "active_3dgs/src/clip_dinoiser"]
+	path = active_3dgs/src/clip_dinoiser
+	url = https://github.com/ongdexter/clip_dinoiser.git
+[submodule "mpl_py"]
+	path = mpl_py
+	url = https://github.com/tyuezhan/mpl_py.git

@@ -1,0 +1,15 @@
+# Install CUDA-compatible torch and torchvision before these dependencies.
+numpy>=1.24,<2
+# ROS Noetic's cv_bridge uses OpenCV 4 type constants and NumPy 1.x.
+opencv-python>=4.2,<4.12
+matplotlib
+kornia
+pyyaml
+tqdm
+scipy
+scikit-learn
+networkx
+pytorch-msssim
+rospkg
+catkin-pkg
+heapdict

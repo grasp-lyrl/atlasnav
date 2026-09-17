@@ -1,0 +1,12 @@
+# CLIP-DINOiser
+mmcv==1.6.0
+mmengine==0.10.7
+mmsegmentation==0.27.0
+open_clip_torch==2.24.0
+hydra-core==1.3.2
+omegaconf==2.3.0
+ftfy==6.2.3
+# Optional LLaVA
+transformers==4.46.3
+accelerate==0.34.2
+bitsandbytes==0.44.1

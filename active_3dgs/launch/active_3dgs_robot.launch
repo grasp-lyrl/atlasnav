@@ -1,0 +1,25 @@
+<launch>
+  <arg name="config_path" default="$(find active_3dgs)/config/active_gs_robot.py" />
+  <arg name="planner_config" default="$(find active_3dgs)/config/local_planner.yaml" />
+  <arg name="odom_topic" default="/zed2i/zed_node/pose" />
+  <arg name="rgb_topic" default="/zed2i/zed_node/rgb/image_rect_color" />
+  <arg name="aligned_depth_topic" default="/zed2i/zed_node/depth/depth_registered" />
+  <arg name="use_odom_msg" default="false" />
+  <arg name="workdir" default="$(env HOME)/.ros/active_3dgs" />
+  <arg name="pca_model" default="indoor" />
+  <arg name="ipca_path" default="$(find active_3dgs)/models/ipca_coco_$(arg pca_model)_24.pt" />
+  <arg name="use_vlm" default="false" />
+
+  <node pkg="active_3dgs" type="active_gs_node.py" name="active_gs_node" output="screen" required="true">
+    <rosparam command="load" file="$(arg planner_config)" />
+    <param name="config_path" value="$(arg config_path)" />
+    <param name="odom_topic" value="$(arg odom_topic)" />
+    <param name="rgb_topic" value="$(arg rgb_topic)" />
+    <param name="aligned_depth_topic" value="$(arg aligned_depth_topic)" />
+    <param name="use_odom_msg" type="bool" value="$(arg use_odom_msg)" />
+    <param name="workdir" value="$(arg workdir)" />
+    <param name="gs_sim" type="bool" value="false" />
+    <param name="ipca_path" value="$(arg ipca_path)" />
+    <param name="use_vlm" type="bool" value="$(arg use_vlm)" />
+  </node>
+</launch>
